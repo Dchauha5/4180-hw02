@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="tasks">You have 7 tasks</string>
+    <string name="view">View Tasks</string>
+    <string name="create">Create A Task</string>
+</resources>
