@@ -1,10 +1,13 @@
 package com.example.group33hw02;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +31,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //openDialog();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Tasks")
+                        .setNeutralButton("Task1", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Toast.makeText(MainActivity.this, "Please Enter A Task Name", Toast.LENGTH_SHORT).show();
+
+
+                            }
+                        });
+                builder.create().show();
 
 
             }
